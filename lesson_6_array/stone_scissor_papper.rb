@@ -9,8 +9,17 @@ object = ["Камень", "Ножницы", "Бумага"]
 comp_choose_object = rand(3)
 
 if user_choose == comp_choose_object
-	puts "Ничья. Еще раз!"
-	user_choose = gets.to_i
+	puts "Ничья!"
 elsif user_choose == 0 && comp_choose_object == 1
-	puts "Вы выйграли"
+	puts "Вы выкинулии #{object[0]}. А компьютер выкинул #{object[1]} Вы выйграли!"
+elsif user_choose == 0 &&comp_choose_object == 2
+	puts "Вы выкинулии #{object[0]}. А компьютер выкинул #{object[2]} Вы проиграли!"
+elsif user_choose == 1 && comp_choose_object == 0
+	puts "Вы выкинулии #{object[1]}. А компьютер выкинул #{object[0]} Вы проиграли!"
+elsif user_choose == 1 && comp_choose_object == 2
+	puts "Вы выкинулии #{object[1]}. А компьютер выкинул #{object[2]} Вы выйграли!"
+elsif user_choose == 2 && comp_choose_object == 0
+	puts "Вы выкинулии #{object[2]}. А компьютер выкинул #{object[0]} Вы выйграли!"
+elsif user_choose == 2 && comp_choose_object == 1
+	puts "Вы выкинулии #{object[2]}. А компьютер выкинул #{object[1]} Вы проиграли!"
 end
