@@ -1,14 +1,5 @@
 # encoding: utf-8
 
-=begin
-if (Gem.win_platform?)
-  Encoding.default_external = Encoding.find(Encoding.locale_charmap)
-  Encoding.default_internal = utf-8
-  [STDIN, STDOUT].each do |io|
-    io.set_encoding(Encoding.default_external, Encoding.default_internal)
-  end
-end
-=end
 puts "Введите N:"
 
 N = gets.to_i
