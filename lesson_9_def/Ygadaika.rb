@@ -11,8 +11,9 @@ proba = gets.chomp.to_i
 
 def sravni(proba, number)
 	if proba == number # если номер совпал
-	  abort 'Ура, вы выиграли!' # завершаем программу
-	else
+	  puts 'Ура, вы выиграли!' # завершаем программу
+	  exit
+	end
 	  # первый вложенный if, проверка в какую сторону ошибся пользователь
 	  if proba > number
 	    puts 'нужно меньше'
@@ -26,7 +27,6 @@ def sravni(proba, number)
 	  else
 	    puts 'Холодно'
 	  end
-	end
 end
 
 # Далее еще 2 раза повторяем тот же самый код от строки 7 до строки 25,
