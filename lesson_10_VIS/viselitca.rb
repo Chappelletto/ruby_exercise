@@ -1,5 +1,7 @@
 require "./methods.rb"
 
+cls
+
 puts "игра виселица, версия 1"
 
 letters = get_letters #todo
@@ -10,7 +12,7 @@ bad_letters = []
 good_letters = []
 
 while errors < 7 do 
-	print_status(letters, good_letters, bad_letters. errors)
+	print_status(letters, good_letters, bad_letters, errors)
 
 	puts "введите след. букву"
 
@@ -27,3 +29,7 @@ while errors < 7 do
 end
 
 print_status(letters, good_letters, bad_letters. errors)
+
+
+#	if (Gem.win_platform? && ARGV[0])
+#		slovo = slovo.encode(ARGV[0].encoding, "cp1251").encode("UTF-8")
