@@ -38,23 +38,23 @@ def get_user_input
 	# пустую строку.
 	letter = ""
 	# В цикле будем опрашивать юзера, пока он не введет что-нибудь
-	while letter == "" do 
-		letter = STDIN.gets.chomp
+	while letter == ""
+		letter = STDIN.gets.encode('UTF-8').chomp
 	end
+	return letter
 end
 
 
 def check_result(user_input, letters, good_letters, bad_letters)
-	if (good_letters.include?(user_input) ||
-		bad_letters.include?(user_input))
-	return 0
+	if (good_letters.include?(user_input) || bad_letters.include?(user_input))
+		return 0
 	end
 
 	if letters.include? user_input
 		good_letters << user_input
 
 		#условие когда отгадано всё слово!
-		if letters.uniq.size == good_letters.size
+		if good_letters.uniq.sort == letters.uniq.sort
 			return 1
 		else
 			return 0
@@ -69,7 +69,7 @@ def get_word_for_print(letters, good_letters)
 	result = ""
 
 	for letter in letters do
-		if good_letters.include? letter
+		if good_letters.include?(item)
 			result += letter + "  "
 		else
 			result += "__"
