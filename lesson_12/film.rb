@@ -3,7 +3,7 @@ class Film
 	# Конструктор принимает на вход два параметра: название фильма и фамилия
   	# режиссера. Значения этих параметров сохраняем в переменных @title и
   	# @director_name экземпляра класса соответственно.
-	def initialize
+	def initialize(title, director)
 		@title = title
 		@director = director
 	end
