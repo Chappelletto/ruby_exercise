@@ -1,32 +1,5 @@
-<<<<<<< HEAD
 # encoding: utf-8
 
-
-file = File.new('./data/quotes.txt', 'r:UTF-8')
-
-#count_str = file.readlines.size
-lines = file.readlines
-
-empty_string = 0
-
-
-
-lines.each {|x| if x == "\n" then empty_string += 1 end}
-
-=begin
-lines.each_with_index do |line, index|
-  # Если строка состоит из одного символа "\n", увеличиваем счетчик пустых
-  # строк.
-  if line == "\n"
-    empty_string += 1
-  end
-end 
-=end
-
-
-#puts "Всего строк #{count_str}"
-puts empty_string
-=======
 file_name = ARGV[0]
 
 # Если имя файла не было передано в качестве аргумента, сообщаем об этом
@@ -103,4 +76,3 @@ puts
 for line in last_five_lines
 	puts line
 end
->>>>>>> 89e692a3428ee46607da5cd3a9a53cfb10398f46
