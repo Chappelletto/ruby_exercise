@@ -59,7 +59,7 @@ def check_result(user_input, letters, good_letters, bad_letters)
 		else
 			return 0
 		end
-	else 
+	else
 		bad_letters << user_input
 		return -1
 	end

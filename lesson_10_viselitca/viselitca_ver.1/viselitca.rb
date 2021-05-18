@@ -12,7 +12,7 @@ errors = 0
 bad_letters = []
 good_letters = []
 
-while errors < 7 do 
+while errors < 7 do
 	print_status(letters, good_letters, bad_letters, errors)
 
 	puts "\nВведите след. букву"
