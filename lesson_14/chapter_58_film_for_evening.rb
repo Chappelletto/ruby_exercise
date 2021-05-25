@@ -1,10 +1,17 @@
+# encoding: utf-8
 
+current_path = File.dirname(__FILE__)
 
+file_path = current_path + '/movies.txt'
 
-file_name = 'movies.txt'
+#file_name = 'movies.txt'
 
-file = File.new(file_name, "r:UTF-8")
+if File.exist?(file_path)
 
-movies = file.readlines
-
-puts "Сегодня предлагаем посмотреть: #{movies.sample}"
+	file = File.new(file_path, "r:UTF-8")
+	movies = file.readlines
+	file.close
+	puts "Сегодня предлагаем посмотреть: #{movies.sample}"
+else
+	puts "Файл не найден"
+end
