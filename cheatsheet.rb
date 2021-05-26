@@ -5,6 +5,15 @@
 
 #@var - инстанс переменная или переменная экзепляра, работает в классе, но не наследуется
 
+gem
+#gem -v
+#gem update --system
+#gem list
+#gem install @namelib
+#rubygems.rog
+#ruby-toolbox.com
+
+
 
 array = [1, 2, 3, 4, 5, 6]
 array.each { |x| puts x }
